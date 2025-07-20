@@ -20,5 +20,11 @@
     <p>Aap single ho? Friendly girls aapse chat karna chahti hain!</p>
     <button onclick="window.location.href='https://mylead.global/stl/your_offer_link/?sub_id={clickid}&city={city}&device={device}'">Start Chat Now</button>
   </div>
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const city = urlParams.get('city') || 'your city';
+  document.title = document.title.replace('{city}', city);
+  document.body.innerHTML = document.body.innerHTML.replaceAll('{city}', city);
+</script>
 </body>
 </html>
